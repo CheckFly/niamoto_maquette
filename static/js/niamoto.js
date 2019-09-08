@@ -1,5 +1,16 @@
 
-/*!
+  // Change style of navbar on scroll
+  window.onscroll = function() {myFunction()};
+  function myFunction() {
+      var navbar = document.getElementById("navbar");
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+          navbar.className = "navbar navbar-expand-md navbar-light bg-light  btco-hover-menu w3-animate-top";
+      } else {
+          navbar.className = navbar.className.replace("w3-animate-top", "");
+      }
+  }
+  
+  /*!
  * Bootstrap 4 multi dropdown navbar ( https://bootstrapthemes.co/demo/resource/bootstrap-4-multi-dropdown-navbar/ )
  * Copyright 2017.
  * Licensed under the GPL license
