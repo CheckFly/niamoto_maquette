@@ -3,10 +3,13 @@
   window.onscroll = function() {myFunction()};
   function myFunction() {
       var navbar = document.getElementById("navbar");
+
       if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-          navbar.className = "navbar navbar-expand-md navbar-light bg-light  btco-hover-menu w3-animate-top";
+          navbar.className = "navbar navbar-expand-md navbar-light bg-light  btco-hover-menu  fixed-top w3-animate-top";
       } else {
           navbar.className = navbar.className.replace("w3-animate-top", "");
+          navbar.className = navbar.className.replace("bg-light", "");
+          navbar.className = navbar.className.replace("navbar-light", "navbar-dark");
       }
   }
   
